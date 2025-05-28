@@ -1,103 +1,206 @@
-import Image from "next/image";
+
+'use client'
+import ContactForm from "@/components/ContactForm";
+import Experience from "@/components/Experience";
+import WorkSection from "@/components/WorkSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="l-main">
+      <section className="home bd-grid" id="home">
+        <div className="home_data">
+          <h1 className="home__title">
+            Hi,
+            <br />
+            I'm <span className="home__title-color">Bhavik</span>
+            <br /> Frontend Developer
+          </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a href="#contact" className="button">Contact</a>
+        </div>
+
+        <div className="home__social">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/bhavik-brahmbhatt-94b259199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            className="home__social-icon"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            <i className='bx bxl-linkedin'></i>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="home__img">
+          <svg
+            className="home__blob"
+            viewBox="0 0 479 467"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+            </mask>
+            <g mask="url(#mask0)">
+              <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+              {/* Use Next.js Image if you have profile image in public/assets/img/perfil.png */}
+              {/* Replace below with Next Image or img tag depending on your setup */}
+              <image
+                className="home__blob-img"
+                x="50"
+                y="60"
+                href="/assets/img/perfil.png"
+              />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section className="about section" id="about">
+        <h2 className="section-title">About</h2>
+
+        <div className="about__container bd-grid">
+          <div className="about__img">
+            <img src="/assets/img/about.jpg" alt="About Bhavik" />
+          </div>
+
+          <div>
+            <h2 className="about__subtitle">I'm Bhavik</h2>
+            <p className="about__text pb-3">
+              I specialize in crafting responsive and user-friendly websites and mobile applications using React and React Native.
+              I also build robust backend APIs with Node.js and MongoDB to ensure smooth data flow and excellent performance.
+              Over the years, I’ve worked with diverse clients across India, Canada, and the Middle East, delivering scalable and high-quality software solutions.
+            </p>
+            <p className="about__text">
+              My approach focuses on clean, maintainable code and seamless integration between frontend and backend systems.
+              I enjoy collaborating with cross-functional teams to bring ideas to life and solve complex challenges.
+              When I’m not coding, you’ll find me exploring new technologies or improving my skills through continuous learning.
+            </p>
+          </div>
+        </div>
+      </section>
+      <Experience />
+      <section className="skills section" id="skills">
+        <h2 className="section-title">Skills & Technologies</h2>
+        <p className="text_center mb-8">
+          Here's a quick glance at the technologies and tools I work with regularly.
+        </p>
+        <div className="skills__container bd-grid">
+          <div>
+            <h2 className="skills__subtitle">Frontend & Mobile</h2>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">React.js</span>
+              </div>
+              <div className="skills__bar skills__html"></div>
+              <div>
+                <span className="skills__percentage">90%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">Next.js</span>
+              </div>
+              <div className="skills__bar skills__css"></div>
+              <div>
+                <span className="skills__percentage">85%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">React Native</span>
+              </div>
+              <div className="skills__bar skills__js"></div>
+              <div>
+                <span className="skills__percentage">88%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">HTML5 & CSS3</span>
+              </div>
+              <div className="skills__bar skills__ux"></div>
+              <div>
+                <span className="skills__percentage">90%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">Tailwind CSS</span>
+              </div>
+              <div className="skills__bar skills__ux"></div>
+              <div>
+                <span className="skills__percentage">80%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">Theme.js</span>
+              </div>
+              <div className="skills__bar skills__ux"></div>
+              <div>
+                <span className="skills__percentage">80%</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="skills__subtitle">APIs & Tools</h2>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">REST API (Node.js)</span>
+              </div>
+              <div className="skills__bar skills__html"></div>
+              <div>
+                <span className="skills__percentage">80%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">SQLite</span>
+              </div>
+              <div className="skills__bar skills__css"></div>
+              <div>
+                <span className="skills__percentage">70%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">Postman</span>
+              </div>
+              <div className="skills__bar skills__js"></div>
+              <div>
+                <span className="skills__percentage">80%</span>
+              </div>
+            </div>
+
+            <div className="skills_data">
+              <div className="skills__names">
+                <span className="skills__name">Razorpay, Stripe, Checkout.com, Tap</span>
+              </div>
+              <div className="skills__bar skills__ux"></div>
+              <div>
+                <span className="skills__percentage">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WORK ===== */}
+      <WorkSection />
+
+      {/* ===== CONTACT ===== */}
+      <ContactForm />
+
+    </main>
   );
 }
