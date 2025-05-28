@@ -3,6 +3,7 @@
 import ContactForm from "@/components/ContactForm";
 import Experience from "@/components/Experience";
 import WorkSection from "@/components/WorkSection";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           <h1 className="home__title">
             Hi,
             <br />
-            I'm <span className="home__title-color">Bhavik</span>
+            I&apos;m <span className="home__title-color">Bhavik</span>
             <br /> Frontend Developer
           </h1>
 
@@ -60,20 +61,20 @@ export default function Home() {
 
         <div className="about__container bd-grid">
           <div className="about__img">
-            <img src="/assets/img/about.jpg" alt="About Bhavik" />
+            <Image src="/assets/img/about.jpg" alt="About Bhavik" width={300} height={300} />
           </div>
 
           <div>
-            <h2 className="about__subtitle">I'm Bhavik</h2>
+            <h2 className="about__subtitle">I&apos;m Bhavik</h2>
             <p className="about__text pb-3">
               I specialize in crafting responsive and user-friendly websites and mobile applications using React and React Native.
               I also build robust backend APIs with Node.js and MongoDB to ensure smooth data flow and excellent performance.
-              Over the years, I’ve worked with diverse clients across India, Canada, and the Middle East, delivering scalable and high-quality software solutions.
+              Over the years, I&apos;ve worked with diverse clients across India, Canada, and the Middle East, delivering scalable and high-quality software solutions.
             </p>
             <p className="about__text">
               My approach focuses on clean, maintainable code and seamless integration between frontend and backend systems.
               I enjoy collaborating with cross-functional teams to bring ideas to life and solve complex challenges.
-              When I’m not coding, you’ll find me exploring new technologies or improving my skills through continuous learning.
+              When I&apos;m not coding, you&apos;ll find me exploring new technologies or improving my skills through continuous learning.
             </p>
           </div>
         </div>
@@ -82,7 +83,7 @@ export default function Home() {
       <section className="skills section" id="skills">
         <h2 className="section-title">Skills & Technologies</h2>
         <p className="text_center mb-8">
-          Here's a quick glance at the technologies and tools I work with regularly.
+          Here&apos;s a quick glance at the technologies and tools I work with regularly.
         </p>
         <div className="skills__container bd-grid">
           <div>
