@@ -27,7 +27,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className='bx bxl-linkedin'></i>
+            <i class='bx  bxl-linkedin-square'></i> 
           </a>
         </div>
 
@@ -48,7 +48,7 @@ export default function Home() {
               <image
                 className="home__blob-img"
                 x="50"
-                y="60"
+                y="107"
                 href="/assets/img/perfil.png"
               />
             </g>
