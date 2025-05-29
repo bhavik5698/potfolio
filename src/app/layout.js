@@ -14,10 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Bhavik Brahmbhatt",
-  description: "Portfolio Website",
-};
 
 export default function RootLayout({ children }) {
   return (
@@ -48,6 +44,7 @@ export default function RootLayout({ children }) {
                 <li className="nav__item"><a href="#skills" className="nav__link">Skills</a></li>
                 <li className="nav__item"><a href="#work" className="nav__link">Work</a></li>
                 <li className="nav__item"><a href="#contact" className="nav__link">Contact</a></li>
+                <li className="nav__item"><a href="/bhavik-brahmbhatt-resume.pdf" className="nav__link" download>Resume</a></li>
               </ul>
             </div>
 

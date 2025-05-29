@@ -1,4 +1,4 @@
-// components/WorkCard.js
+'use client'
 export default function WorkCard({ project }) {
     return (
         <div className="relative group overflow-hidden rounded-xl shadow-lg">
